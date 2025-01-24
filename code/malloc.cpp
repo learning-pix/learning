@@ -1,5 +1,5 @@
 # include <stdio.h>
-# include <malloc.h>
+# include <stdlib.h>
 
 int main()
 {
@@ -7,5 +7,6 @@ int main()
 	*p = 10;
 	printf("%d\n", *p);
 	free(p);
+
 	return 0;
 }
