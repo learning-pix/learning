@@ -63,21 +63,21 @@ void output(struct student *p, int len)
         printf("\n");
     }
 }
-    int main()
-    {
-        int len;
-        struct student *p;
+int main()
+{
+    int len;
+    struct student *p;
 
-        printf("请输入学生的个数:\n");
-        printf("len = ");
-        scanf("%d", &len);
+    printf("请输入学生的个数:\n");
+    printf("len = ");
+    scanf("%d", &len);
 
-        p = (struct student *)malloc(len * sizeof(struct student));
+    p = (struct student *)malloc(len * sizeof(struct student));
 
-        input(p, len);
-        sort(p, len);
-        output(p, len);
+    input(p, len);
+    sort(p, len);
+    output(p, len);
 
-        free(p);
-        return 0;
-    }
+    free(p);
+    return 0;
+}
