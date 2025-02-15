@@ -2,7 +2,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-void menu()
+void menu()//目录
 {
     printf ("........................\n");
     printf ("......1.Game Start......\n");
@@ -12,7 +12,7 @@ void menu()
     return;
 }
 
-void Play_Start()
+void Play_Start()//主要游戏，生成随机数，判断输入与随机数的大小并作相应表示，相等退出循环
 {
     int magic = rand()%100 + 1;
     int guess;
@@ -43,7 +43,7 @@ void Play_Start()
 
 }
 
-int main ()
+int main ()//input 用来判断是否进行游戏，1是，2否，其余重输入， 2 退出循环。
 {
     int input = 0;
     srand ((unsigned int)time(0));
@@ -67,8 +67,16 @@ int main ()
 
         }
     }
-    while(input);
+    while(1);//如果为input 那么0也可退出循环
 
     return 0;
 
 }
+/*
+2025-02-15 00:13:27
+关于vscode 的若干学到的：
+1 . 程序，文件名不能用中文，会显示报错“找不到路径”
+2 . 如menu 函数只用来形容界面，即向我展示什么叫做“一个函数，只干一件事。”
+3 . time srand((unsigned int)time (0)) time (0)即时间在1970/1/1至今的秒数，强制转换成unsigned int 类型成为srand参数。
+4 . 及时添加注释。
+ */
