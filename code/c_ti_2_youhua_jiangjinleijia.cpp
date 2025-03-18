@@ -3,7 +3,7 @@
 double calculateBonus(int profit) {
     double bonus = 0.0;
 
-    if (profit <= 100000) {
+    if (profit <= 100000) {    //if语句只有6，7剩下的都是else
         bonus += profit * 0.1;
     } else {
         bonus += 100000 * 0.1;
